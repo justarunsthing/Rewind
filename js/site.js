@@ -1,3 +1,4 @@
+// Gets the user input from the page
 function getString() {
     document.getElementById("alert").classList.add("invisible");
 
@@ -7,6 +8,7 @@ function getString() {
     displayResult(reversedString);
 }
 
+// Reverse the string 
 function getReversedString(userString) {
     let reversedString = [];
 
@@ -17,6 +19,7 @@ function getReversedString(userString) {
     return reversedString;
 }
 
+// Display the reversed string and message
 function displayResult(reversedString){
     // Write message on the page
     document.getElementById("message").innerHTML = `The reversed string is: ${reversedString}`;

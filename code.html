@@ -53,15 +53,43 @@
                     <div class="col-lg-8">
                         <pre class="line-numbers">
                             <code class="language-javascript">
+                                // Gets the user input from the page
+                                function getString() {
+                                    document.getElementById("alert").classList.add("invisible");
 
+                                    let userString = document.getElementById("user-string").value;
+                                    let reversedString = getReversedString(userString);
+
+                                    displayResult(reversedString);
+                                }
+
+                                // Reverse the string 
+                                function getReversedString(userString) {
+                                    let reversedString = [];
+
+                                    for (let i = userString.length - 1; i >= 0; i--){
+                                        reversedString += userString[i];
+                                    }
+
+                                    return reversedString;
+                                }
+
+                                // Display the reversed string and message
+                                function displayResult(reversedString){
+                                    // Write message on the page
+                                    document.getElementById("message").innerHTML = `The reversed string is: ${reversedString}`;
+
+                                    // Show the alert box
+                                    document.getElementById("alert").classList.remove("invisible");
+                                }
                             </code>
                         </pre>
                     </div>
-                    <div class="col-lg-4">
+<!--                     <div class="col-lg-4">
                         <p>The code is structured in one function</p>
                         <h5>Hello World</h5>
                         <p>Hello world is a function that displays an alert with a message of "Hello World"</p>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </main>
