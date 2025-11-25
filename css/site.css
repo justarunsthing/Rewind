@@ -1,20 +1,22 @@
 :root {
-    --primary-color: #000000;
-    --secondary-color: #1D5888;
+    --primary-color: #1D5888;
+    --secondary-color: #73C8D2;
     --dark-color: #292929;
-    --white-color: #DFF3E4;
+    --white-color: #E7E7E7;
 }
 
-body {
-    color: var(--dark-color);
+.theme-color {
+    background-color: #0046FF;
 }
 
-nav {
-    background-color: var(--dark-color);
+.action {
+    background-color: var(--secondary-color);
 }
 
-footer {
-    background-color: var(--dark-color);
+.action:hover {
+    background-color: #4C8BFF;
+    border: 2px solid #1D5888;
+    box-shadow: 0 0 10px rgba(0, 70, 255, 0.35);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -71,8 +73,4 @@ code[class*="language-"], pre[class*="language-"] {
     white-space: pre-wrap;
     word-break: break-all;
     word-wrap: break-word;
-}
-
-.theme-color {
-    background-color: #0345FC;
 }

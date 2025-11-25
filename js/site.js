@@ -27,3 +27,7 @@ function displayResult(reversedString){
     // Show the alert box
     document.getElementById("alert").classList.remove("invisible");
 }
+
+// Set date
+const currentYear = new Date().getFullYear();
+document.getElementById("year").textContent = `©${currentYear}`;
