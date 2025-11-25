@@ -57,7 +57,13 @@
                                 function getString() {
                                     document.getElementById("alert").classList.add("invisible");
 
-                                    let userString = document.getElementById("user-string").value;
+                                    let userString = document.getElementById("user-string").value.trim();
+
+                                    // Prevent empty or whitespace-only submissions
+                                    if (!userString) {
+                                        return;
+                                    }
+
                                     let reversedString = getReversedString(userString);
 
                                     displayResult(reversedString);
